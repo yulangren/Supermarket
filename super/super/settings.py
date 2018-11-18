@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+#     安装APP到列表
+    'cart.apps.CartConfig', # 购物车模块
+    'goods.apps.GoodsConfig',   # 商品模块
+    'order.apps.OrderConfig',   # 订单模块
+    'user.apps.UserConfig',     # 用户模块
 ]
 
 MIDDLEWARE = [
