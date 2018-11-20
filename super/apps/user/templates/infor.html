@@ -1,0 +1,83 @@
+{% extends 'public/basis.html' %}
+{% load static %}
+{% block title %}
+    个人资料
+{% endblock %}
+{% block head_css %}
+    <link href="{% static 'css/check.css' %}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block top_h1 %}
+    个人资料
+{% endblock %}
+{% block content %}
+    <form action="" method="post">
+    {% csrf_token %}
+    <ul class="safty1">
+        <li>
+{#            <a href="">#}
+                <i style="margin-top: 25px;">头像</i>
+                <div class="infor-pic">
+                    <img name="img" src="{% static 'images/infortx.png' %}"/>
+                </div>
+{#            </a>#}
+        </li>
+        <li>
+
+                <i>昵称</i>
+                <input class="infor-tele" name="nick_name" placeholder="昵称" value="{{ data.nick_name }}"/>
+
+        </li>
+        <li>
+            <a href="">
+                <i>性别</i>
+                <i class="infor-tele">
+                    {% if data.user_sex == 1 %}:
+                        <label class="am-radio-inline">
+                            <input type="radio" name="user_sex" value="1" checked="checked" data-am-ucheck>男
+                        </label>
+                        <label class="am-radio-inline">
+                            <input type="radio" name="user_sex" value="2" data-am-ucheck>女
+                        </label>
+                    {% else %}
+                        <label class="am-radio-inline">
+                            <input type="radio" name="user_sex" value="1" data-am-ucheck>男
+                        </label>
+                        <label class="am-radio-inline">
+                            <input type="radio" name="user_sex" value="2" checked="checked" data-am-ucheck>女
+                        </label>
+                    {% endif %}
+                </i>
+            </a>
+        </li>
+        <li>
+
+                <i>生日</i>
+                <input type="text" class="infor-tele" name="" placeholder="{{ data.borm_date|default:'1990.0.0' }}"/>
+
+        </li>
+    </ul>
+    <div style="height: 10px; background: #efefef;"></div>
+
+    <ul class="safty1">
+        <li>
+            <i>学校</i>
+            <input class="infor-tele" name="school" placeholder="就读于哪个学校" value="{{ data.school|default:'达州职院' }}"/>
+        </li>
+        <li>
+            <i>位置</i>
+            <input class="infor-tele" name="address" placeholder="详细地址" value="{{ data.address|default:'四川省广元市' }}"/>
+        </li>
+        <li>
+            <i>故乡</i>
+            <input class="infor-tele" name="hometown" placeholder="来自哪里" value="{{ data.hometown|default:'四川' }}"/>
+        </li>
+        <li>
+            <i>手机</i>
+            <input class="infor-tele" name="user_ID" placeholder="13012345678" value="{{ data.user_ID }}"/>&nbsp;
+            <span class="am-btn-secondary am-btn am-btn-default am-round am-btn-xs">手机号即为用户ID</span>
+        </li>
+    <button type="submit" class="am-btn am-btn-default am-round am-btn-secondary login-btn"> 修改信息 </button>
+    </ul>
+    </form>
+{% endblock %}
+{% block footer %}{% endblock %}

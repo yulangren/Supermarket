@@ -2,178 +2,83 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba77df2-87b9-4d13-8353-b9ee5d1940f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/assets/iconfont/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/iconfont/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/iconfont/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/iconfont/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/amazeui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/ch.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/check.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/_notes/dwsync.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/1-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/1-icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/1-icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/1-icon3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/1-icon4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/1-icon5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/1-icon6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/1-icon7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/2-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/2icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/2icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/2icon3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/3icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/3icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/3icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/IMG_3574_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/banner1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/bj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/bm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/brand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/candar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/care.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/city.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/contactqq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/contacttele.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/dui.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/ewm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/game.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/gift.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/gqhb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/grayxin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/guoqi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/gz1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/gz2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/gz3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/herat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/hotline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/infortx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/j_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/j_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/j_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/jp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/ka.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/lz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/m_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/m_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/m_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/m_05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/m_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/m_07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/m_08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/m_09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/memtx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/moneysafty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/moneytele.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/my.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/order-bot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/order-my.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/order-pic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/order-top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/order.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/ph.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/qd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/qiandao.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/qqlogin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/redherat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/redxin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/s1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/s2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/s3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/s4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/s5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/s6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/sao.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/shop1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/shop2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/shop3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/shop4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/shopcart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/sign-up-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/sinalog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/skongjian.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/sqq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/ssina.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/step.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/sweixin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/sweixinfriend.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/tele.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/test1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/test10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/test11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/test2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/test21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/test3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/test4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/test5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/test6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/test7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/test8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/test9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/tit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/tj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/ts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/tt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/tx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/tx1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/update.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/volume.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/wei.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/weichong.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/wl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/wxlogin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/ye.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/yhq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/yzm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/zhi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/amazeui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/area.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/date.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/iscroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery-1.10.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.mobile-1.4.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/popup.mini.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/time.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/member.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/reg.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/user/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/user/migrations/0002_auto_20181120_1902.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/user/templates/infor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/super.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/super.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/base_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/login_session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/super/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/super/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/super/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/super/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/member.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/public/basis.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/templates/forgetpassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -182,72 +87,93 @@
     <session id="-443498359">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.open.time.72" value="1" />
+          <entry key="project.open.time.76" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="200" />
-          <entry key="py" value="315" />
-          <entry key="py@super" value="15" />
+          <entry key="cell" value="26" />
+          <entry key="html" value="2137" />
+          <entry key="py" value="5498" />
+          <entry key="py@super" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CommandLine" value="15" />
-          <entry key="HTML" value="200" />
-          <entry key="Python" value="315" />
+          <entry key="CommandLine" value="25" />
+          <entry key="HTML" value="2137" />
+          <entry key="Python" value="5498" />
+          <entry key="Scratch" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="1" />
-          <entry key="py" value="8" />
+          <entry key="html" value="43" />
+          <entry key="members" value="7" />
+          <entry key="py" value="68" />
+          <entry key="pyi" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
-          <entry key="Python" value="8" />
+          <entry key="Database Element" value="7" />
+          <entry key="HTML" value="43" />
+          <entry key="Python" value="68" />
+          <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-              <folding>
-                <marker date="1542530641187" expanded="true" signature="73:115" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/user/templates/member.html">
+        <entry file="file://$PROJECT_DIR$/apps/user/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="219" lean-forward="true" selection-start-line="219" selection-end-line="219" />
+            <state relative-caret-position="884">
+              <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
               <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#2#47#0" expanded="true" />
+                <element signature="e#241#278#0" />
+                <element signature="e#237#1012#0" />
+                <element signature="e#1193#1931#0" />
+                <element signature="e#1890#1934#0" />
+                <element signature="e#2060#2673#0" />
+                <element signature="e#2797#2893#0" />
+                <element signature="e#3227#4478#0" />
+                <element signature="e#4631#4669#0" />
+                <marker date="1542714955857" expanded="true" signature="1281:1286" ph="..." />
+                <marker date="1542714955857" expanded="true" signature="2101:2106" ph="..." />
+                <marker date="1542714955857" expanded="false" signature="2184:2189" ph="..." />
+                <marker date="1542714955857" expanded="false" signature="2212:2287" ph="..." />
+                <marker date="1542714955857" expanded="true" signature="4669:4732" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/super/urls.py">
+        <entry file="file://$PROJECT_DIR$/apps/user/templates/member.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="190">
+              <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/user/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="14" />
               <folding>
-                <element signature="e#639#680#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1542711744553" expanded="true" signature="120:311" ph="..." />
               </folding>
             </state>
           </provider>
@@ -268,11 +194,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/super/settings.py" />
-        <option value="$PROJECT_DIR$/user/views.py" />
-        <option value="$PROJECT_DIR$/user/urls.py" />
-        <option value="$PROJECT_DIR$/super/urls.py" />
         <option value="$PROJECT_DIR$/user/templates/member.html" />
+        <option value="$PROJECT_DIR$/super/urls.py" />
+        <option value="$PROJECT_DIR$/user/urls.py" />
+        <option value="$PROJECT_DIR$/user/templates/login.html" />
+        <option value="$PROJECT_DIR$/user/models.py" />
+        <option value="$PROJECT_DIR$/user/forms.py" />
+        <option value="$PROJECT_DIR$/user/views.py" />
+        <option value="$PROJECT_DIR$/user/templates/reg.html" />
+        <option value="$PROJECT_DIR$/super/settings.py" />
+        <option value="$PROJECT_DIR$/db/base_models.py" />
+        <option value="$PROJECT_DIR$/apps/user/forms.py" />
+        <option value="$PROJECT_DIR$/apps/user/templates/reg.html" />
+        <option value="$PROJECT_DIR$/apps/user/templates/login.html" />
+        <option value="$PROJECT_DIR$/apps/user/templates/forgetpassword.html" />
+        <option value="$PROJECT_DIR$/apps/user/models.py" />
+        <option value="$PROJECT_DIR$/templates/public/basis.html" />
+        <option value="$PROJECT_DIR$/apps/user/templates/infor.html" />
+        <option value="$PROJECT_DIR$/apps/user/urls.py" />
+        <option value="$PROJECT_DIR$/db/login_session.py" />
+        <option value="$PROJECT_DIR$/apps/user/templates/member.html" />
+        <option value="$PROJECT_DIR$/apps/user/views.py" />
       </list>
     </option>
   </component>
@@ -283,8 +225,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="278" />
+    <option name="y" value="83" />
     <option name="width" value="1050" />
     <option name="height" value="579" />
   </component>
@@ -294,7 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -305,32 +246,41 @@
             <path>
               <item name="super" type="b2602c69:ProjectViewProjectNode" />
               <item name="super" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="super" type="b2602c69:ProjectViewProjectNode" />
               <item name="super" type="462c0819:PsiDirectoryNode" />
-              <item name="super" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="super" type="b2602c69:ProjectViewProjectNode" />
-              <item name="super" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="super" type="b2602c69:ProjectViewProjectNode" />
+              <item name="super" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Django_project\Supermarket\super\apps" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Django_project\Supermarket\super\apps\user\templates" />
       <recent name="D:\Django_project\Supermarket\super\user\templates" />
+      <recent name="D:\Django_project\Supermarket\super\templates\public" />
       <recent name="D:\Django_project\Supermarket\super\templates" />
       <recent name="D:\Django_project\Supermarket\super\static" />
     </key>
@@ -362,7 +312,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
+      <option name="port" value="8002" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
@@ -388,30 +338,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="manage.py@super" weight="0.3289689" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.1603631" />
+      <window_info id="Structure" order="1" sideWeight="0.50239235" side_tool="true" weight="0.15582451" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Console" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.37806875" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4091653" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015129" side_tool="true" weight="0.39934534" />
+      <window_info anchor="bottom" id="manage.py@super" order="12" weight="0.3289689" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.3161876" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,53 +371,216 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/super/settings.py">
+    <entry file="file://D:/virtualenv/django08/Lib/site-packages/django/db/models/fields/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="126" column="34" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#305#1" />
-          </folding>
+        <state relative-caret-position="87">
+          <caret line="1476" column="51" selection-start-line="1476" selection-start-column="51" selection-end-line="1476" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/urls.py">
+    <entry file="file://D:/virtualenv/django08/Lib/site-packages/django/db/models/fields/files.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-          <folding>
-            <marker date="1542530641187" expanded="true" signature="73:115" ph="..." />
-          </folding>
+        <state relative-caret-position="87">
+          <caret line="394" column="8" selection-start-line="394" selection-start-column="8" selection-end-line="394" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/super/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="195">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
           <folding>
             <element signature="e#639#680#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/templates/member.html">
+    <entry file="file://D:/virtualenv/django08/Lib/site-packages/django/forms/fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="219" lean-forward="true" selection-start-line="219" selection-end-line="219" />
+        <state relative-caret-position="292">
+          <caret line="232" lean-forward="true" selection-start-line="232" selection-end-line="232" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/virtualenv/django08/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-145">
+          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/super/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1175">
+          <caret line="123" column="40" lean-forward="true" selection-start-line="123" selection-start-column="40" selection-end-line="123" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/base_models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="50" lean-forward="true" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1542687999281" expanded="true" signature="59:60" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/virtualenv/django08/Lib/site-packages/django/shortcuts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="15" column="101" selection-start-line="15" selection-start-column="101" selection-end-line="15" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/templates/reg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/templates/forgetpassword.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/virtualenv/django08/Lib/site-packages/django/db/models/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="184" selection-start-line="184" selection-end-line="184" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/virtualenv/django08/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/virtualenv/django08/Lib/site-packages/django/utils/deprecation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/virtualenv/django08/Lib/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+            <marker date="1542692289753" expanded="true" signature="113:114" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/datetime.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="229" column="32" lean-forward="true" selection-start-line="229" selection-start-column="32" selection-end-line="229" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/templates/infor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="82" column="32" lean-forward="true" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
+          <folding>
+            <element signature="e#2714#2720#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/basis.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/login_session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <marker date="1542714226494" expanded="true" signature="114:115" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1542711744553" expanded="true" signature="120:311" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://09f9216a-ffa6-4b96-8461-3158cc91f1e2/schema/main/table/members">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/templates/member.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+          <folding>
+            <element signature="e#2#47#0" expanded="true" />
+            <element signature="e#241#278#0" />
+            <element signature="e#237#1012#0" />
+            <element signature="e#1193#1931#0" />
+            <element signature="e#1890#1934#0" />
+            <element signature="e#2060#2673#0" />
+            <element signature="e#2797#2893#0" />
+            <element signature="e#3227#4478#0" />
+            <element signature="e#4631#4669#0" />
+            <marker date="1542714955857" expanded="true" signature="1281:1286" ph="..." />
+            <marker date="1542714955857" expanded="true" signature="2101:2106" ph="..." />
+            <marker date="1542714955857" expanded="false" signature="2184:2189" ph="..." />
+            <marker date="1542714955857" expanded="false" signature="2212:2287" ph="..." />
+            <marker date="1542714955857" expanded="true" signature="4669:4732" ph="..." />
           </folding>
         </state>
       </provider>

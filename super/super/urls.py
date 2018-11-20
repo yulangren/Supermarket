@@ -20,5 +20,5 @@ import user
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^',include('user.urls',namespace='user'))        # 用户APP
+    url(r'^member/',include('user.urls',namespace='user'))        # 用户APP
 ]
