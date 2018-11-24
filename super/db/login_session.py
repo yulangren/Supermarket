@@ -2,6 +2,9 @@
 from django.shortcuts import redirect
 
 # 检测会员登录的session    装饰器
+from django.views import View
+
+
 def Session(old_function):          # 把调用装饰的视图函数传入
     def inner(request, *args, **kwargs):        # 传入参数
         if request.session.get('id'):           # 逻辑判断

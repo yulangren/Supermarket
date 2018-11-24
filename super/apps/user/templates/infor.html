@@ -6,19 +6,30 @@
 {% block head_css %}
     <link href="{% static 'css/check.css' %}" rel="stylesheet" type="text/css"/>
 {% endblock %}
-{% block top_h1 %}
-    个人资料
+{% block header %}
+    <header data-am-widget="header" class="am-header am-header-default sq-head ">
+			<div class="am-header-left am-header-nav">
+				<a href="javascript:history.back()" class="">
+					<i class="am-icon-chevron-left"></i>
+				</a>
+			</div>
+			<h1 class="am-header-title">
+  	            个人资料
+            </h1>
+	    </header>
+
 {% endblock %}
 {% block content %}
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <ul class="safty1">
         <li>
 {#            <a href="">#}
                 <i style="margin-top: 25px;">头像</i>
                 <div class="infor-pic">
-                    <img name="img" src="{% static 'images/infortx.png' %}"/>
+                    <img name="img" src="{{ MEDIA_URL }}{{ data.head_portrait }}"/>
                 </div>
+            <input type="file" name="head_portrait" >
 {#            </a>#}
         </li>
         <li>
@@ -52,7 +63,7 @@
         <li>
 
                 <i>生日</i>
-                <input type="text" class="infor-tele" name="" placeholder="{{ data.borm_date|default:'1990.0.0' }}"/>
+                <input type="date" class="infor-tele" name="borm_date" value="{{ data.borm_date|date:'Y-m-d'}}" />
 
         </li>
     </ul>

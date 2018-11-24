@@ -1,0 +1,4 @@
+运行配置说明:
+    1.redis(登录需要)
+    2.Django
+    3.pip install Pillow(上传文件包)

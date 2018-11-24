@@ -19,17 +19,21 @@
     {% block head_js %}{% endblock %}
 </head>
 <body style="background: #f6f6f6;">
+{% block header %}
 <header data-am-widget="header" class="am-header am-header-default sq-head ">
+
     <div class="am-header-left am-header-nav">
         <a href="javascript:history.back()" class="">
             <i class="am-icon-chevron-left"></i>
         </a>
     </div>
-
     <h1 class="am-header-title">
-       {% block top_h1 %}{% endblock %}
+       个人中心
     </h1>
 </header>
+
+{% endblock %}
+
 <div style="height: 49px;"></div>
 
 {% block content %}
@@ -42,7 +46,7 @@
     <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default sq-foot am-no-layout" id="">
         <ul class="am-navbar-nav am-cf am-avg-sm-5">
             <li>
-                <a href="index.html" class="">
+                <a href="{% url 'goods:index' %}" class="">
                     <span class="am-icon-home"></span>
                     <span class="am-navbar-label">首页</span>
                 </a>
@@ -67,7 +71,7 @@
             </li>
 
             <li>
-                <a href="member.html" class="curr">
+                <a href="{% url 'user:member' %}" class="curr">
                     <span class="am-icon-user"></span>
                     <span class="am-navbar-label">我的</span>
                 </a>

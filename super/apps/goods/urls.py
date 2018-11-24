@@ -17,9 +17,9 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 import user
+from goods.views import index, detail
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^member/',include('user.urls',namespace='user')) ,       # 用户模块(user)
-    url(r'^goods/',include('goods.urls',namespace='goods')) ,       # 商品模块(goods)
+    url(r'^$', index, name='index'), # 首页
+    url(r'^detail/$', detail, name='detail'), # 商品详情
 ]

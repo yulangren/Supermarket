@@ -1,0 +1,88 @@
+{% extends 'public/basis.html' %}
+{% load static %}
+{% block title %}
+会员积分兑换
+{% endblock %}
+{% block header %}
+    		<header data-am-widget="header" class="am-header am-header-default sq-head ">
+			<div class="am-header-left am-header-nav">
+				<a href="javascript:history.back()" class="">
+					<i class="am-icon-chevron-left"></i>
+				</a>
+			</div>
+			<h1 class="am-header-title">
+  	            积分兑换
+            </h1>
+	    </header>
+{% endblock %}
+
+{% block content %}
+    <ul class="j-change">
+	    	<li><a href=""><img src="{% static 'images/j_06.png' %}" width="30"/>&nbsp;积分：<span>{{ db_data.integral }} </span></a></li>
+	    	<li><a href="integralrecords.html"><img src="{% static 'images/j_03.png' %}"  width="28"/>&nbsp;兑换记录</a></li>
+	    </ul>
+	    <div class="j-box">
+	    	<ul class="j-game">
+	    		<li><a href="">优惠券<i class="arrow"></i><b class="sing-arr"></b></a></li>
+	    		<li><a href=""> 充话费<i class="arrow"></i><b class="sing-arr"></b></a></li>
+	    		<li><a href="">充流量<i class="arrow"></i><b class="sing-arr"></b></a></li>
+	    		<li class="current"><a href="">玩游戏<i class="arrow"></i><b class="sing-arr"></b> </a></li>
+	    		<li><a href=""> Q会员<i class="arrow"></i><b class="sing-arr"></b></a></li>
+	    	</ul>
+	    	<input type="text" placeholder="请输入您的游戏相关信息，例如：“游戏账号，江苏一区”" class="j-search" />
+	    	<ul data-am-widget="gallery" class="am-gallery pro-list am-avg-sm-2 am-avg-md-2 am-avg-lg-4 am-gallery-default am-no-layout">
+		      <li>
+		        <div class="am-gallery-item">
+		            <a href="" class="">
+		              <img src=" {% static 'images/game.png' %}">
+		                <div class="am-gallery-desc"><i class="iconfont">&#xe604;</i><span>600</span></div>
+		            </a>
+		        </div>
+		      </li>
+		      <li>
+		        <div class="am-gallery-item">
+		            <a href="" class="">
+		              <img src=" {% static 'images/game.png' %}">
+		                <div class="am-gallery-desc"><i class="iconfont">&#xe604;</i><span>600</span></div>
+		            </a>
+		        </div>
+		      </li>
+		      <li>
+		        <div class="am-gallery-item">
+		            <a href="" class="">
+		              <img src=" {% static 'images/game.png' %}">
+		                <div class="am-gallery-desc"><i class="iconfont">&#xe604;</i><span>600</span></div>
+		            </a>
+		        </div>
+		      </li>
+		      <li>
+		        <div class="am-gallery-item">
+		            <a href="" class="">
+		              <img src=" {% static 'images/game.png' %}">
+		                <div class="am-gallery-desc"><i class="iconfont">&#xe604;</i><span>600</span></div>
+		            </a>
+		        </div>
+		      </li>
+		      <li>
+		        <div class="am-gallery-item">
+		            <a href="" class="">
+		              <img src=" {% static 'images/game.png' %}">
+		                <div class="am-gallery-desc"><i class="iconfont">&#xe604;</i><span>600</span></div>
+		            </a>
+		        </div>
+		      </li>
+		      <li>
+		        <div class="am-gallery-item">
+		            <a href="" class="">
+		              <img src=" {% static 'images/game.png' %}">
+		                <div class="am-gallery-desc"><i class="iconfont">&#xe604;</i><span>600</span></div>
+		            </a>
+		        </div>
+		      </li>
+
+		    </ul>
+	    </div>
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

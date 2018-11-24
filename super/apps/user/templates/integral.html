@@ -1,0 +1,52 @@
+{% extends 'public/basis.html' %}
+{% load static %}
+{% block title %}
+会员积分详情
+{% endblock %}
+{% block header %}
+    <header data-am-widget="header" class="am-header am-header-default sq-head ">
+			<div class="am-header-left am-header-nav">
+				<a href="javascript:history.back()" class="">
+					<i class="am-icon-chevron-left"></i>
+				</a>
+			</div>
+			<h1 class="am-header-title">
+  	            积分
+            </h1>
+	    </header>
+{% endblock %}
+
+{% block content %}
+	    <div class="record-ye">
+	   	  <p>当前积分</p>
+	   	  <b>{{ db_data.integral }}</b>
+	    </div>
+	    <div class="re-chong">
+	      <a href="integralexchange.html"><img src="{% static 'images/gift.png' %}" width="22"/><span>兑换</span></a>
+	    </div>
+	    <ul class="money-out">
+	    	<li class="current"><a href="">获得</a></li>
+	    	<li><a href="integralexchange.html">兑换</a></li>
+	    </ul>
+	    <ul class="out-list">
+	    	<li>
+	    		<img src="{% static 'images/candar.png' %}" width="30" />
+	    		<span>
+	    			<p>签到送积分</p>
+	    			<p style="color: #a4a4a4; font-size: 1.4rem;">2016-01-07 16:34:20</p>
+	    		</span>
+	    		<i>+5</i>
+	    	</li>
+	    	<li>
+	    		<img src="{% static 'images/candar.png' %}" width="30" />
+	    		<span>
+	    			<p>签到送积分</p>
+	    			<p style="color: #a4a4a4; font-size: 1.4rem;">2016-01-07 16:34:20</p>
+	    		</span>
+	    		<i>+5</i>
+	    	</li>
+	    </ul>
+{% endblock %}
+{% block footer %}
+
+{% endblock %}
