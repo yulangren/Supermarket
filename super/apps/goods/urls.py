@@ -17,9 +17,10 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 import user
-from goods.views import index, detail
+from goods.views import index, detail, category
 
 urlpatterns = [
     url(r'^$', index, name='index'), # 首页
-    url(r'^detail/$', detail, name='detail'), # 商品详情
+    url(r'^(?P<id>\d+).html$', detail, name='detail'), # 商品详情
+    url(r'^category/(?P<go_id>\d+)/(?P<order>\d+)$', category, name='category'), # 分类列表
 ]

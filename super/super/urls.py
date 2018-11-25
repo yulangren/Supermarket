@@ -20,6 +20,9 @@ import user
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    # 上传部件自动调用的上传地址
+    url(r'^ckeditor/', include("ckeditor_uploader.urls")),
+    # 其他模块
     url(r'^member/',include('user.urls',namespace='user')) ,       # 用户模块(user)
     url(r'^goods/',include('goods.urls',namespace='goods')) ,       # 商品模块(goods)
 ]

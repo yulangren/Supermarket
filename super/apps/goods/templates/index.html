@@ -31,7 +31,11 @@
         <ul class="am-slides">
             {% for datum in shuffling %}
                 <li>
-                    <a href="{{ datum.url_activity }}" title="{{ datum.trade_naem }}">
+                    <a href="{% if datum.url_activity == 'null' %}
+                    {{ datum }}
+                    {% else %}
+                    {{ datum.url_activity }}
+                    {% endif %}" title="{{ datum.trade_naem }}">
                         <img style="height: 17rem" src="{{ MEDIA_URL }}{{ datum.img_url_add }}"/>
                     </a></li>
 
@@ -86,7 +90,7 @@
         </li>
         <li>
             <div class="am-gallery-item">
-                <a href="category.html" class="">
+                <a href="{% url 'goods:category' lists 0 %}" class="">
                     <img src="{% static 'images/icon5.png' %}"/>
                     <p>超市</p>
                 </a>
@@ -113,84 +117,31 @@
     <!--不规则展示-->
     <div class="h-line"></div>
     <!-- 特色专区-->
+
+{% for foo in Feat %}
     <div class="sq-title">
-        <img src="{% static 'images/ts.png' %}" width="26"/>
-        特色专区
+<img src="{% static 'images/ts.png' %}" width="26"/>
+    {{ foo.trade_naem }}
     </div>
+
     <ul data-am-widget="gallery" class="am-gallery pro-list am-avg-sm-2 am-avg-md-2 am-avg-lg-4 am-gallery-default">
-        <li>
+        {% for f in foo.features_list_set.all %}
+            {# 模型类中没有明确的外键时,逆向方法(模型对象.别模型类_set.属性),有明确外键时,正向方法(模型对象.外键属性.别类的属性) #}
+            <li>
             <div class="am-gallery-item">
-                <a href="detail.html" class="">
-                    <img src=" {% static 'images/test.png' %}"/>
-                    <h3 class="am-gallery-title">猪骨头棒新鲜生鲜肉制品猪大骨头筒骨熬汤佳品500g</h3>
-                    <div class="am-gallery-desc">￥52</div>
+                <a href="{% url 'goods:detail' f.trade_ID.id %}" class="">
+                    <img src=" {{ MEDIA_URL }}{{ f.trade_ID.goods_LOGO }}"/>
+                    <h3 class="am-gallery-title">{{ f.trade_ID.goods_name }}</h3>
+                    <div class="am-gallery-desc">￥{{ f.trade_ID.goods_price }}</div>
                 </a>
             </div>
         </li>
-        <li>
-            <div class="am-gallery-item">
-                <a href="detail.html" class="">
-                    <img src=" {% static 'images/test1.png' %}"/>
-                    <h3 class="am-gallery-title">冻品批发大江鸡腿 冷鲜鸡腿放心食材1kg 冷冻食材</h3>
-                    <div class="am-gallery-desc">￥39</div>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div class="am-gallery-item">
-                <a href="detail.html" class="">
-                    <img src=" {% static 'images/test2.png' %}"/>
-                    <h3 class="am-gallery-title">法国加力果12个装 进口新鲜水果 嘎啦苹果 包邮</h3>
-                    <div class="am-gallery-desc">￥45.8</div>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div class="am-gallery-item">
-                <a href="detail.html" class="">
-                    <img src=" {% static 'images/test21.png' %}"/>
-                    <h3 class="am-gallery-title">法国加力果12个装 进口新鲜水果 嘎啦苹果 包邮</h3>
-                    <div class="am-gallery-desc">￥45.8</div>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div class="am-gallery-item">
-                <a href="detail.html" class="">
-                    <img src=" {% static 'images/test.png' %}"/>
-                    <h3 class="am-gallery-title">猪骨头棒新鲜生鲜肉制品猪大骨头筒骨熬汤佳品500g</h3>
-                    <div class="am-gallery-desc">￥52</div>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div class="am-gallery-item">
-                <a href="detail.html" class="">
-                    <img src=" {% static 'images/test1.png' %}"/>
-                    <h3 class="am-gallery-title">冻品批发大江鸡腿 冷鲜鸡腿放心食材1kg 冷冻食材</h3>
-                    <div class="am-gallery-desc">￥39</div>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div class="am-gallery-item">
-                <a href="detail.html" class="">
-                    <img src=" {% static 'images/test2.png' %}"/>
-                    <h3 class="am-gallery-title">法国加力果12个装 进口新鲜水果 嘎啦苹果 包邮</h3>
-                    <div class="am-gallery-desc">￥45.8</div>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div class="am-gallery-item">
-                <a href="detail.html" class="">
-                    <img src=" {% static 'images/test21.png' %}"/>
-                    <h3 class="am-gallery-title">法国加力果12个装 进口新鲜水果 嘎啦苹果 包邮</h3>
-                    <div class="am-gallery-desc">￥45.8</div>
-                </a>
-            </div>
-        </li>
+        {% endfor %}
+
+
+
     </ul>
+    {% endfor %}
     <!--签到-->
     <div class="qd-box">
         <div class="popup-title">
