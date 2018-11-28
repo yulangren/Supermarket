@@ -1,7 +1,7 @@
 import random
 import uuid
 
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
 from django_redis import get_redis_connection
@@ -10,8 +10,8 @@ from db.login_session import Session
 # from user.base_view import send_sms
 from user.base_view import send_sms
 
-from user.forms import UserReg
-from user.models import Members
+from user.forms import UserReg, AddressForm
+from user.models import Members, Addreses
 import hashlib
 
 """
@@ -65,7 +65,12 @@ def login(request):
             request.session['id'] = data.get('user_id')
             request.session['paw'] = password  # 设置登录session
             request.session.set_expiry(1800)  # 有效期为半小时
-            return redirect('user:member')  # 登录成功,跳转至个人中心页面
+            # request.session.set_expiry(0)  # 关闭浏览器失效
+            skip = request.GET.get('next')  # 检测是否是跳转登陆
+            if skip:
+                return redirect(skip)  # 回跳
+            else:
+                return redirect('user:member')  # 登录成功,跳转至个人中心页面
         else:
             context = {'data': {'user_id': data.get('user_id')}}
             return render(request, 'login.html', context)
@@ -131,7 +136,7 @@ def infor(request):
 
         #  更新数据
         mem = Members.objects.get(user_ID=user_id)
-        mem.head_portrait = head_portrait       # 注意: 添加文件只能使用对象的方法添加
+        mem.head_portrait = head_portrait  # 注意: 添加文件只能使用对象的方法添加
         mem.save()  # 保存数据
 
         return redirect('user:member')
@@ -175,6 +180,137 @@ def cash(request):
 # 待付款
 def obligation(request):
     return render(request, 'allorder.html')
+
+
+#  收货地址管理
+class Gladdress(View):
+    # 判断是否登陆
+    def get(self, request):
+        # 回显数据
+        try:
+            id = Members.objects.get(user_ID=request.session.get('id')).pk  # 获取当前用户的id
+            add = Addreses.objects.filter(add_user=id, is_delete=False).order_by('-is_default')  # 地址对象
+            context = {'add': add}
+            return render(request, 'gladdress.html', context)
+        except:
+            return redirect('user:login')
+
+    def post(self, request):
+        return HttpResponse('请求方式错误')
+
+
+# 地址添加页
+class Address(View):
+
+    def get(self, request):
+        return render(request, 'address.html')
+
+    def post(self, request):
+        if request.session.get('id'):
+            id = Members.objects.get(user_ID=request.session.get('id')).pk  # 获取用户id
+            data = request.POST
+            form = AddressForm(data)  # 清洗数据
+            if form.is_valid():
+                cleaned_data = form.cleaned_data  # 得到清洗成功的后的数据
+                # 检测用户收货地址是否超过六条
+                if Addreses.objects.filter(add_user=id).count() < 6:
+                    # 将地址添加进数据库,持久保存
+                    if cleaned_data.get('is_default'):
+                        # 如果设置为默认,就将全部的设置为False
+                        Members.objects.get(pk=id).addreses_set.filter(is_delete=False).update(is_default=False)
+                        # 重新设置当前的地址为默认的
+                        Members.objects.get(pk=id).addreses_set.create(**cleaned_data)
+                    else:
+                        # 如果不是默认的,就直接保存
+                        Members.objects.get(pk=id).addreses_set.create(**cleaned_data)
+                else:
+                    context = {'error': '单个用户地址数不能大于6'}
+                    return render(request, 'address.html', context)
+                return redirect('user:gladdress')
+            else:
+                context = {'errors': form.errors, 'data': data}
+                return render(request, 'address.html', context)
+        else:
+            return redirect('user:login')
+
+
+# 修改地址
+@Session
+def address_edit(request):
+    if request.method == 'GET':
+        # 接收参数
+        id = request.GET.get('id')
+        # 获得地址
+        content = Addreses.objects.get(pk=id)
+        # 准备渲染数据
+        context = {'edit': content}
+        return render(request, 'address_edit.html', context)
+    # post修改请求
+    else:
+        data = request.POST  # 修改数据  # 获取数据
+        # 获取ID
+        try:
+            id = data.get('id')
+        except:  # 检测防止非法用户篡改ID值
+            return redirect('user:gladdress')
+        # 使用form表单验证数据
+        form = AddressForm(data)
+        if form.is_valid():  # 清洗数据为True时
+            #             得到清洗后的数据
+            cleaned_data = form.cleaned_data
+            Addreses.objects.filter(pk=id).update(**cleaned_data)  # 更新数据
+            return redirect('user:gladdress')  # 更新成功后跳转至列表页
+        else:
+            # 清洗失败时,返回错误,并回显
+            content = Addreses.objects.get(pk=id)
+            context = {'errors': form.errors, 'edit': content}
+            return render(request, 'address_edit.html', context)
+
+
+
+#
+
+# 删除地址
+@Session
+def address_del(request):
+    if request.method=="POST":
+            # 接收参数
+        try:
+            id = request.POST.get('id')
+        except:
+            return JsonResponse({'stat':1,'hint':'参数错误!'})
+        try:
+            Addreses.objects.get(pk = id).delete()
+            return JsonResponse({'stat':200,'hint':'删除成功!'})
+        except:
+            return JsonResponse({'stat':2,'hint':'删除失败!'})
+    else:
+        return JsonResponse({'stat':0,'hint':'请求方式错误!'})
+
+
+# 修改默认地址
+@Session
+def default_edit(request):
+            #判断请求方式
+    if request.method == "POST":
+        # 修改        接收参数
+        try:
+            id = request.POST.get('id')     # 获取地址id
+            user = Members.objects.get(user_ID=request.session.get('id')).pk        # 获得用户ID
+        except:
+            return JsonResponse({"stat":0,"hint":"参数错误!"})
+        try:
+            Addreses.objects.filter(add_user=user).update(is_default=False)   #   全部为False
+            Addreses.objects.filter(add_user=user, pk=id).update(is_default=True)  # 设置为False
+            return JsonResponse({"stat": 200, "hint": "修改成功!"})
+        except:
+            return JsonResponse({"stat":1,"hint":"修改错误!"})
+
+    else:
+        return JsonResponse({"stat":400,"hint":"请求方式错误!"})
+
+
+
 
 
 # 发送验证码

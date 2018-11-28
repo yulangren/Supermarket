@@ -3,6 +3,9 @@ from django.core.validators import RegexValidator
 from django_redis import get_redis_connection
 
 #   用户注册验证
+from user.models import Addreses
+
+
 class UserReg(forms.Form):
     user_id = forms.CharField(error_messages={'required':'正确填写号码!'},min_length=11,max_length=11,required=True,
                               validators=[RegexValidator(r'^1[3-9]\d{9}$', '号码格式不正确')])
@@ -39,5 +42,27 @@ class UserReg(forms.Form):
             return self.cleaned_data.get('yzm')
         # except:
         #     return forms.ValidationError('验证码错误!')
+
+
+#  会员收货地址验证
+class AddressForm(forms.ModelForm):
+    tel_sign = forms.CharField(error_messages={'required': '正确填写号码!'}, min_length=11, max_length=11, required=True,
+                               validators=[RegexValidator(r'^1[3-9]\d{9}$', '号码格式不正确')])
+
+    class Meta:
+        model = Addreses         # 对应数据模型
+        fields = ['take_user','detail_address','is_default','harea','hcity','hproper']
+
+        # 判断是否为空
+        error_messages={
+            'take_user': {'required':'收件人不能为空!'},
+            'detail_address':{'required':'详细地址必填!'},
+            'hcity':{'required':'必填项!'}, #   省
+            'hproper':{'required':'必填项!'},#   市
+            'harea':{'required':'必填项!'},#   区
+
+
+        }
+
 
 

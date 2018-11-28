@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-
+from django_redis import get_redis_connection
 
 # 首页
 from goods.models import Shuffling_activity, Goods_SKU, Goods_class, Features, Features_list
@@ -33,11 +33,23 @@ def category(request,go_id,order):
     goods_sku = Goods_SKU.objects.filter(goods_class_id=goods_get).order_by(order_by[order])          # 查询所有的产品
     #         对查询的记录进行相应的排序控制
 
+    # 创建redis对象
+    r  = get_redis_connection(alias='default')
+    cart_count = 0
+    # 查询redis数据
+    if request.session.get('id'):
+        user_id = request.session.get('id')
+        count = r.hvals(user_id)            # 获取Redis数据库的商品数量
+        for val in count:
+            cart_count += int(val)          # 总和
+
+
     context = {'goods':goods,
                'go_id':go_id,
                'goods_get':goods_get,
                'goods_sku':goods_sku,
-               'order':order
+               'order':order,
+               'cart_count':cart_count
                }     # 参数传递
 
     return render(request,'category.html',context)

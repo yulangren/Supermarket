@@ -14,20 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from django.contrib import admin
 
-import user
-from goods.views import index
+from cart.views import Cart, ShopCart
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', index,name='首页'),   # 网站首页
-    # 全文搜索框架
-    url(r'^search/', include('haystack.urls')),
-    # 上传部件自动调用的上传地址
-    url(r'^ckeditor/', include("ckeditor_uploader.urls")),
-    # 其他模块
-    url(r'^member/',include('user.urls',namespace='user')) ,       # 用户模块(user)
-    url(r'^goods/',include('goods.urls',namespace='goods')) ,       # 商品模块(goods)
-    url(r'^Cart/',include('cart.urls',namespace='cart')) ,       # 购物车(Cart)
+    url(r'^Cart$', Cart.as_view(), name='Cart'), # 添加购物车
+    url(r'^ShopCart$', ShopCart.as_view(), name='ShopCart'), # 购物车
+
 ]

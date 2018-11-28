@@ -1,0 +1,100 @@
+{% extends 'public/basis.html' %}
+{% load static %}
+{% block title %}
+    收货地址
+{% endblock %}
+{% block header %}
+    <header data-am-widget="header" class="am-header am-header-default sq-head ">
+        <div class="am-header-left am-header-nav">
+            <a href="javascript:history.back()" class="">
+                <i class="am-icon-chevron-left"></i>
+            </a>
+        </div>
+        <h1 class="am-header-title">
+            管理收货地址
+        </h1>
+        <div class="am-header-right am-header-nav">
+            <a href="{% url 'user:address' %}">
+                <i class="am-icon-plus"></i>
+            </a>
+        </div>
+    </header>
+{% endblock %}
+{% block content %}
+    <ul class="address-list">
+    {% for addreses in add %}
+         <li{% if addreses.is_default %} class="curr" {% endif %}>
+            <p>收货人：{{ addreses.take_user }}&nbsp;&nbsp;{{ addreses.tel_sign }}</p>
+            <p class="order-add1">
+         收货地址：{{ addreses.hcity }} {{ addreses.hproper }} {{ addreses.harea }} {{ addreses.detail_address }}
+            </p>
+            <hr/>
+            <div class="address-cz">
+                <label class="am-radio am-warning">
+                    <input type="radio" class="is_default" name="radio3" value="" data-am-ucheck {% if addreses.is_default %}
+                    checked
+                    {% endif %}> 设为默认
+                </label>
+                <a href="{% url 'user:address_edit' %}?id={{ addreses.pk }}"><img src="{% static 'images/bj.png' %}" width="18"/>&nbsp;编辑</a>
+                <a href="javascript:;" class="del" cont_id="{{ addreses.pk }}">删除</a>
+            </div>
+        </li>
+    {% endfor %}
+
+
+
+
+    </ul>
+{% endblock %}
+{% block footer %}{% endblock %}
+{% block footer_js %}
+<script>
+$(function () {
+    $('.del').on('click',function () {
+        var that = $(this);
+        var id = that.attr('cont_id');
+        //console.debug(id);
+        // 发起ajax
+        $.ajax({
+            type:"post",
+            data:{"id":id,"csrfmiddlewaretoken":"{{ csrf_token }}"},
+            dataType:"json",
+            url:"{% url 'user:address_del' %}",
+            success:function (data) {
+                if (data.stat == 200) {
+                    // 删除成功
+                    $(that).parents('li').remove()
+                }else {
+                    //删除失败
+                    alert('删除失败!')
+                }
+            }
+        })
+    });
+    //修改默认
+    $('.is_default').on('click',function () {
+        var that = $(this);
+        var id = $(that).parents('li').find('.del').attr('cont_id');
+        //console.debug(id)
+        // 发起ajax
+        $.ajax({
+            url:"{% url 'user:default_edit' %}",
+            dataType: "json",
+            type:"post",
+            data:{"id":id,'csrfmiddlewaretoken':"{{ csrf_token }}"},
+            success:function (data) {
+                if (data.stat == 200) {
+                    // 设置成功
+                    $('.address-list').find('li').attr('class','');  // 取消li边框
+                    $(that).parents('li').attr('class','curr')      // 添加边框
+                }else {
+                    // 设置失败
+                    alert('提示:设置失败!')
+                }
+            }
+        })
+    })
+})
+</script>
+{% endblock %}
+

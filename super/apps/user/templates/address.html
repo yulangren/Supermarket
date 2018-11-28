@@ -1,0 +1,73 @@
+{% extends 'public/basis.html' %}
+{% load static %}
+{% block title %}
+    地址添加页
+{% endblock %}
+
+{% block head_css %}
+    <style type="text/css">
+._citys {width:100%; height:100%;display: inline-block; position: relative;background-color: #F0F0F0}
+._citys span {color: #56b4f8; height: 15px; width: 15px; line-height: 15px; text-align: center; border-radius: 3px; position: absolute; right: 1em; top: 10px; border: 1px solid #56b4f8; cursor: pointer;}
+._citys0 {width: 100%; height: 34px; display: inline-block; border-bottom: 2px solid #56b4f8; padding: 0; margin: 0;}
+._citys0 li {float:left; height:34px;line-height: 34px;overflow:hidden; font-size: 15px; color: #888; width: 80px; text-align: center; cursor: pointer; }
+.citySel {background-color: #56b4f8; color: #fff !important;}
+._citys1 {width: 100%;height:80%; display: inline-block; padding: 10px 0; overflow: auto;}
+._citys1 a {height: 35px; display: block; color: #666; padding-left: 6px; margin-top: 3px; line-height: 35px; cursor: pointer; font-size: 13px; overflow: hidden;}
+._citys1 a:hover { color: #fff; background-color: #56b4f8;}
+.ui-content{border: 1px solid #EDEDED;}
+#city{width: 90%}
+li{list-style-type: none;}
+</style>
+{% endblock %}
+{% block head_js %}
+    <script src="{% static 'js/address/common.js' %}"></script>
+<script src="{% static 'js/address/Popt.js' %}"></script>
+<script src="{% static 'js/address/cityJson.js' %}"></script>
+<script src="{% static 'js/address/citySet.js' %}"></script>
+{% endblock %}
+{% block header %}
+    <header data-am-widget="header" class="am-header am-header-default sq-head ">
+        <div class="am-header-left am-header-nav">
+            <a href="javascript:history.back()" class="">
+                <i class="am-icon-chevron-left"></i>
+            </a>
+        </div>
+        <h1 class="am-header-title">
+            <a href="" class="">新增收货地址</a>
+        </h1>
+    </header>
+{% endblock %}
+{% block content %}
+    <form method="post" action="">
+    {% csrf_token %}
+    <ul class="address">
+        <li><!--<span>请选择地址:</span>--><span id="city" style="padding-left:5px;">
+            {% if data.harea %}{{ data.hcity }}-{{ data.hproper }}-{{ data.harea }}
+        {% else %}            请选择地址        {% endif %}</span></li>
+        <p style="color: red">{{ errors.harea.0 }}</p>
+        <li><input type="text" name="detail_address" class="add-input detail_add" value="{{ data.detail_address }}" placeholder="详细地址"/></li>
+        <p style="color: red">{{ errors.detail_address.0 }}</p>
+        <li><input type="text" name="take_user" class="add-input consignee " value="{{ data.take_user }}" placeholder="收货人"/></li>
+        <p style="color: red">{{ errors.take_user.0 }}</p>
+        <li><input type="text" name="tel_sign" class="add-input contact" value="{{ data.tel_sign }}" placeholder="联系电话"/></li>
+        <p style="color: red">{{ errors.tel_sign.0 }}</p>
+    </ul>
+    <div class="moren">
+        <label class="am-checkbox am-warning">
+            <input type="checkbox" checked="checked" name="is_default" value="1" data-am-ucheck checked>设为默认
+        </label>
+    </div>
+    <p style="color: red">{% if error %}提示: {{ error }}{% endif %}</p>
+    <input type="submit" class="login-btn" value="确认添加">
+    </form>
+
+{% endblock %}
+{% block footer %}{% endblock %}
+{% block footer_js %}
+	<script type="text/javascript">
+		$("#city").click(function (e) {
+			SelCity(this,e);
+			console.log(this);
+		});
+	</script>
+{% endblock %}

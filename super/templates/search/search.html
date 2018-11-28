@@ -1,0 +1,70 @@
+{% extends 'public/basis.html' %}
+{% load static %}
+{% block title %}
+    搜索商品列表
+{% endblock %}
+{% block head_css %}
+    <style>
+        .shop-list-mid .tit a {
+            color: #909090;
+            font-size: 1.4rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            white-space: normal;
+            text-overflow: ellipsis;
+        }
+
+    </style>
+{% endblock %}
+
+
+{% block header %}
+    <header data-am-widget="header" class="am-header am-header-default sq-head ">
+        <div class="am-header-left am-header-nav">
+            <a href="javascript:history.back()" class="">
+                <i class="am-icon-chevron-left"></i>
+            </a>
+        </div>
+        <form method="get" action="/search/">
+        <div class="cate-search">
+            <input type="text" name="q" value="{{ query  }}" class="cate-input" placeholder="请输入您要的搜索的产品关键词"/>
+            <input type="submit" value="" class="cate-btn"/>
+        </div>
+    </form>
+    </header>
+{% endblock %}
+{% block content %}
+
+<ul class="list-pro">
+                {% for good in page %}       {# SearchResult.object才是检索的模型（商品）对象  #}
+                    <li>
+                        <a href="{% url 'goods:detail' good.object.pk %}">
+                            <img src=" {{ MEDIA_URL }}{{ good.object.goods_LOGO }}" class="list-pic"/></a>
+                        <div class="shop-list-mid" style="width: 65%;">
+                            <div class="tit">
+                                <a href="{% url 'goods:detail' good.object.pk %}">{{ good.object.goods_name }}</a>
+                            </div>
+                            <div class="am-gallery-desc">￥{{ good.object.goods_price }}</div>
+                            <p>销量：{{ good.object.sales }}{{ good.object.goods_unit }}</p>
+                        </div>
+                        <div class="list-cart">
+                            <div class="d-stock ">
+                                <a class="decrease">-</a>
+                                <input id="num" readonly="" class="text_box" name="" type="text" value="0">
+                                <a class="increase">+</a>
+                            </div>
+                        </div>
+                    </li>
+                    {% empty %}
+                    <li>这里暂未上架商品哟!</li>
+                {% endfor %}
+
+            </ul>
+
+{% endblock %}
+{% block footer %}
+
+{% endblock %}
+

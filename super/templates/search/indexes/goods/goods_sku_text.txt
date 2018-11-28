@@ -1,0 +1,3 @@
+{{object.goods_name}}
+{{object.goods_abstract}}
+{{object.goods_spu.trade_naem}}

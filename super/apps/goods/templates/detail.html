@@ -51,10 +51,9 @@
         	<h4>数量：</h4>
             <div class="d-stock">
               <a class="decrease">-</a>
-                <form action="" method="post">
-                <input id="num" readonly="" class="text_box" name="" type="text" value="1">
-                <input id="id" type="hidden" value="644">
-                </form>
+
+                <input id="num" readonly="" class="text_box" name="count" goods-sku="{{ sku.id }}" type="text" value="1">
+
                 <a class="increase">+</a>
                <span id="dprice" class="price" style="display:none"> 36</span>
             </div>
@@ -101,7 +100,7 @@
 {% block footer %}
     <div style=" height: 55px;"></div>
  <ul class="fix-shopping">
- 	<li><a href="shopcart.html" class="join">加入购物车</a></li>
+ 	<li><a href="JavaScript:;" class="join">加入购物车</a></li>
  	<li><a href="tureorder.html" class="imm-buy">立即购买</a></li>
  </ul>
 {% endblock %}
@@ -115,17 +114,48 @@
 			var current_num = parseInt(self.siblings('input').val());
 			current_num += 1;
 			self.siblings('input').val(current_num);
-			update_item(self.siblings('input').data('item-id'));
-		});
+		})	;
 		$('.decrease').click(function(){
 			var self = $(this);
 			var current_num = parseInt(self.siblings('input').val());
 			if(current_num > 1){
 				current_num -= 1;
 				self.siblings('input').val(current_num);
-				update_item(self.siblings('input').data('item-id'));
 			}
-		})
+		});
+
+    {#  添加数量ajax  #}
+        $('.join').on('click',function () {
+            {#console.debug(111)#}      {# 绑定时间成功 #}
+            var sku_id = $('#num').attr('goods-sku');
+            var  count = $('#num').val();       {# 获取数据 #}
+            {#console.debug(sku_id,count);#}
+            $.ajax({
+                type:"post",
+                url:"{% url 'cart:Cart' %}",
+                dataType:"json",
+                data:{"sku_id":sku_id,"count":count,"csrfmiddlewaretoken":"{{ csrf_token }}"},
+                success:function (data) {
+                    {#console.debug(data)#}
+                    if (data.con == 0){
+                        var show = confirm("操作!是否跳转至登陆");   //把确认框
+                        if (show){
+                        return location.href="{% url 'user:login' %}?next={% url 'goods:detail' sku.id %}"
+                        }   {# 修改 #}
+                    }else if (data.con == 1){
+                            console.debug('商品不存在')
+                    }else if (data.con == 2) {
+                            console.debug('数量异常')
+                    }else if (data.con == 3) {
+                            console.debug('库存不足')
+                    }else if (data.con == 200) {
+                            alert('添加成功')
+                    }
+                }
+            })
+        })
+
 	})
+
 </script>
 {% endblock %}

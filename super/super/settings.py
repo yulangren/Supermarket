@@ -26,7 +26,7 @@ SECRET_KEY = '856+psii=xciu!(#2+g!#lhyi@-q&&-6)w7uh((u#_u=lv)07j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -38,12 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #     安装APP到列表
+    'haystack',  # 全文检索框架
     'cart.apps.CartConfig',  # 购物车模块
     'goods.apps.GoodsConfig',  # 商品模块
     'order.apps.OrderConfig',  # 订单模块
     'user.apps.UserConfig',  # 用户模块
     'ckeditor',  # 添加ckeditor富文本编辑器
     'ckeditor_uploader',  # 添加ckeditor富文本编辑器文件上传部件
+
 ]
 
 MIDDLEWARE = [
@@ -163,3 +165,18 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'full',  # 全部显示
     },
 }
+
+
+# 全文检索框架的配置
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        # 配置搜索引擎
+        # 'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        # 中文分词 使用jieba的whoosh引擎
+        'ENGINE': 'haystack.backends.whoosh_cn_backend.WhooshEngine',
+        # 配置索引文件目录
+        'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
+    },
+}
+#当添加、修改、删除数据时，自动生成索引
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
