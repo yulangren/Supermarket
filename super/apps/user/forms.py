@@ -61,8 +61,4 @@ class AddressForm(forms.ModelForm):
             'hproper':{'required':'必填项!'},#   市
             'harea':{'required':'必填项!'},#   区
 
-
         }
-
-
-

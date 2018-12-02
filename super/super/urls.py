@@ -30,4 +30,5 @@ urlpatterns = [
     url(r'^member/',include('user.urls',namespace='user')) ,       # 用户模块(user)
     url(r'^goods/',include('goods.urls',namespace='goods')) ,       # 商品模块(goods)
     url(r'^Cart/',include('cart.urls',namespace='cart')) ,       # 购物车(Cart)
+    url(r'^order/',include('order.urls',namespace='order')) ,       # 订单(order)
 ]

@@ -151,8 +151,8 @@ SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
 
 # 阿里云短信验证码发送配置
-ACCESS_KEY_ID = "LTAI2qSiJdWP87em"
-ACCESS_KEY_SECRET = "FzORQ587PgGBoOAdmxzCjaxQi8klUi"
+ACCESS_KEY_ID = "LTAIXICz0tWCZbf8"
+ACCESS_KEY_SECRET = "VUKjwZFSGfgSopAUJh3S2mqDsq5KI2"
 
 # 配置上传文件索引地址
 MEDIA_URL = "/static/media/"
@@ -166,7 +166,6 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-
 # 全文检索框架的配置
 HAYSTACK_CONNECTIONS = {
     'default': {
@@ -178,5 +177,5 @@ HAYSTACK_CONNECTIONS = {
         'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
     },
 }
-#当添加、修改、删除数据时，自动生成索引
+# 当添加、修改、删除数据时，自动生成索引
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'

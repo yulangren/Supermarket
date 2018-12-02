@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 
-from cart.views import Cart, ShopCart
+from order.views import tureorder, order_pay, order_all, pay, star
 
 urlpatterns = [
-    url(r'^Cart$', Cart.as_view(), name='Cart'), # 添加购物车
-    url(r'^ShopCart$', ShopCart.as_view(), name='ShopCart'), # 购物车
-
+    url(r'^tureorder/$',tureorder,name='tureorder') ,    # 提交订单
+    url(r'^tureorder/pay/$',order_pay,name='order_pay'),     # 确认订单
+    url(r'^allorder/$',order_all,name='order_all'),     # 全部订单
+    url(r'^pay/',pay,name='pay'),     # 确认支付
+    url(r'^pay_star/',star,name='star'),     # 支付结果
 ]

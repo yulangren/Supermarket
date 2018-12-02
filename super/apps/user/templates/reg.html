@@ -63,6 +63,7 @@
                             if (data.state === 200) {
                                 {#  发送成功   #}
                                 {#    改变按钮样式#}
+                                console.debug('发送成功!');
                                 var num = 60;
                                 {# 初始化时间 #}
                                 var time = setInterval(function () {
@@ -86,6 +87,8 @@
                                     }
                                 }, 1000);
 
+                            }else {
+                                console.debug('获取失败!')
                             }
                         }
 

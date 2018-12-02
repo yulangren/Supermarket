@@ -1,0 +1,164 @@
+{% extends 'public/basis.html' %}
+{% load static %}
+{% block title %}
+    提交订单
+{% endblock %}
+{% block head_css %}
+    <meta name="renderer" content="webkit">
+    <link href="{% static 'css/amazeui.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block header %}
+    <header data-am-widget="header" class="am-header am-header-default sq-head ">
+        <div class="am-header-left am-header-nav">
+            <a href="javascript:history.back()" class="">
+                <i class="am-icon-chevron-left"></i>
+            </a>
+        </div>
+        <h1 class="am-header-title">
+            <a href="" class="">提交订单</a>
+        </h1>
+    </header>
+{% endblock %}
+
+
+{% block content %}
+    <h5 class="order-tit">收货人信息</h5>
+    <div class="order-name">
+
+        <p class="order-tele">{{ orders.address_name }}&nbsp;&nbsp;&nbsp;{{ orders.address_tel }}</p>
+        <p class="order-add">
+            {{ orders.address_site }}</p>
+
+
+    </div>
+
+    <div style="background: #eee; height: 10px;"></div>
+
+    <ul class="shopcart-list" style="padding-bottom: 0;">
+        {% for order in orders.ordercommodity_set.all %}
+            <li>
+                <img src="{{ MEDIA_URL }}{{ order.skuID.goods_LOGO }}" class="shop-pic"/>
+                <div class="order-mid">
+                    <div class="tit">{{ order.skuID.goods_name }}</div>
+                    <div class="order-price">￥<span class="price">{{ order.goods_price }}</span> <i>X<span
+                            class="num">{{ order.goods_count }}</span></i></div>
+                </div>
+            </li>
+        {% endfor %}
+
+
+    </ul>
+
+    <ul class="order-infor">
+        <li class="order-infor-first">
+            <span>商品总计：</span>
+            <i>￥<span class="total_price">{{ orders.order_money }}</span></i>
+        </li>
+        <li class="order-infor-first">
+            <span>运输方式：</span>
+            <i>
+                {{ orders.transport.carriage_name }}
+            </i>
+        </li>
+
+    </ul>
+    <div style="background: #eee; height: 10px;"></div>
+    <textarea placeholder="备注说明" name="remark" class="bz-infor">{{ orders.address_note }}</textarea>
+
+    <ul>
+        {% for pay in payment %}
+            <li style="overflow: hidden;margin: 0 auto;text-align: center">
+                <div style="float: left;margin-left: 4rem"><img src="{{ MEDIA_URL }}{{ pay.payment_img }}" width="50"/>
+                </div>
+                <div style="float: right;margin-right: 10rem;text-align: left">
+                    <label class="am-radio-inline">
+                        <input type="radio" {% if pay.payment_name == '支付宝' %}
+                               checked="checked"
+                        {% endif %}  name="radio10" value="{{ pay.pk }}"> &emsp;
+                        {{ pay.payment_name }}支付
+                    </label>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div style="background: #eee; height: 10px;"></div>
+    <div style="height: 55px;"></div>
+    <div class="shop-fix">
+        <div class="order-text">
+            应付总额：<span>￥<span id="tail">{{ orders.actually_paid }}</span></span>
+        </div>
+        <a href="javascript:;" class="js-btn" oderId_id="{{ orders.order_number }}">确认支付</a>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <!--底部-->
+    <div style="height: 55px;"></div>
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default sq-foot am-no-layout" id="">
+        <ul class="am-navbar-nav am-cf am-avg-sm-5">
+            <li>
+                <a href="{% url 'goods:index' %}" class="">
+                    <span class="am-icon-home"></span>
+                    <span class="am-navbar-label">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="" class="">
+                    <span class="am-icon-comments"></span>
+                    <span class="am-navbar-label">动态</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'cart:ShopCart' %}" class="">
+                    <span class="am-icon-shopping-cart"></span>
+                    <span class="am-navbar-label">购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'order:order_all' %}" class="">
+                    <span class="am-icon-file-text"></span>
+                    <span class="am-navbar-label">订单</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'user:member' %}" class="curr">
+                    <span class="am-icon-user"></span>
+                    <span class="am-navbar-label">我的</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+{% block footer_js %}
+    <script>
+        $(function () {
+            $('.js-btn').on('click', function () {
+                //  获取订单编号
+                var oderId_id = $(this).attr('oderId_id');
+                //console.debug(oderId_id);
+                // ajax请求
+                $.ajax({
+                    url: "{% url 'order:pay' %}",
+                    data: {"oderId_id": oderId_id, "csrfmiddlewaretoken": "{{ csrf_token }}"},
+                    type: "post",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.star == 200) {
+                            // 支付成功跳转
+                           // console.debug(oderId_id);
+                            location.href = data.res;
+                        } else {
+                            var res = confirm('支付失败,是否支付 ?');
+                            if (res) {
+                                location.href = "{% url 'goods:index' %}"
+                            }
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+{% endblock %}

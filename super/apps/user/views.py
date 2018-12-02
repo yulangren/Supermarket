@@ -280,7 +280,7 @@ def address_del(request):
         except:
             return JsonResponse({'stat':1,'hint':'参数错误!'})
         try:
-            Addreses.objects.get(pk = id).delete()
+            Addreses.objects.filter(pk = id).update(is_delete = True)
             return JsonResponse({'stat':200,'hint':'删除成功!'})
         except:
             return JsonResponse({'stat':2,'hint':'删除失败!'})
@@ -315,16 +315,21 @@ def default_edit(request):
 
 # 发送验证码
 def verification(request):
-    re = [str(random.randint(0, 9)) for _ in range(4)]
-    res = ''.join(re)  # 获得思维随机码
-    print(res)  # 测试打印验证码
-    con = get_redis_connection("default")
-    result = con.set('yzm', res)  # 将验证码写入redis缓存
-    if (result):
-        con.expire('yzm', 60)
-        # 发送短信验证码
-        __business_id = uuid.uuid1()
-        params = "{\"code\":\"%s\",\"product\":\"用户注册验证码\"}" % res,
-        send_sms(__business_id, "18781282947", "注册验证", "SMS_2245271", params)
-        # 响应ajax
-        return JsonResponse({'state': 200})
+    if request.method =="POST":
+        # 获取用户输入的手机号
+        tel = request.POST.get('user_id')
+        re = [str(random.randint(0, 9)) for _ in range(4)]
+        res = ''.join(re)  # 获得4位随机码
+        # print(res)  # 测试打印验证码
+        con = get_redis_connection("default")
+        result = con.set('yzm', res)  # 将验证码写入redis缓存
+        if (result):
+            con.expire('yzm', 60)
+            # 发送短信验证码
+            __business_id = uuid.uuid1()
+            params = "{\"code\":\"%s\",\"product\":\"SMS_151991471\"}" % res
+            send_sms(__business_id, tel, "深度资源", "SMS_151991471", params).decode('utf-8')
+            # 响应ajax
+            return JsonResponse({'state': 200})
+    else:
+        return JsonResponse({'state': 400})

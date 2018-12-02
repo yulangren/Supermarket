@@ -21,12 +21,13 @@
         <p>亲、您的购物车还是空空的哦，快去装满它!</p>
         <a href="{% url 'goods:index' %}" class="goshopping">前去逛逛</a>
     </div>
+    <form method="get" id="order_tur" action="{% url 'order:tureorder' %}">
     <ul class="shopcart-list">
         {#   列表     #}
         {% for goods in goods_sku %}
             <li>
                 <label class="am-checkbox am-warning">
-                    <input type="checkbox" checked="checked" value="" data-am-ucheck checked>
+                    <input type="checkbox" checked="checked" value="{{ goods.pk }}" name="sku_id" data-am-ucheck checked>
                 </label>
                 <a href="{% url 'goods:detail' goods.pk %}"><img src="{{ MEDIA_URL }}{{ goods.goods_LOGO }}"
                                                                  class="shop-pic"/></a>
@@ -54,13 +55,13 @@
 
         <div style="height: 10px; background: #eee;"></div>
     </ul>
-
+    </form>
     <div class="shop-fix">
         <label class="am-checkbox am-warning">
             <input type="checkbox" id="check_all" checked="checked" value="" data-am-ucheck checked>
         </label>
         <a class="">全选</a>
-        <a href="tureorder.html" class="js-btn">去结算</a>
+        <a href="javascript:;" class="js-btn">去结算</a>
         <div class="js-text">
             <P>合计：<b>￥<span>0</span></b></P>
             <p class="js-car">免费配送</p>
@@ -81,7 +82,7 @@
                 </a>
             </li>
             <li>
-                <a href="message.html" class="">
+                <a href="" class="">
                     <span class="am-icon-comments"></span>
                     <span class="am-navbar-label">动态</span>
                 </a>
@@ -93,7 +94,7 @@
                 </a>
             </li>
             <li>
-                <a href="allorder.html" class="">
+                <a href="{% url 'order:order_all' %}" class="">
                     <span class="am-icon-file-text"></span>
                     <span class="am-navbar-label">订单</span>
                 </a>
@@ -118,38 +119,28 @@
             $('.increase').click(function () {
                 var self = $(this);
                 // 添加数据
-
+                total_prices();// 重新计算总价
                 var sku_id = parseInt(self.siblings('input').attr('sku_id'));
-
+                //console.debug(sku_id)
                 $.ajax({
                     url: "{% url 'cart:Cart' %}",
                     data: {"sku_id": sku_id, "count": 1, "csrfmiddlewaretoken": "{{ csrf_token }}"},
                     type: "post",
                     dataType: "json",
                     success: function (data) {
+                        total_prices();// 重新计算总价
                         {#console.debug(data)#}
-                        if (data.con == 0) {
-                            {#var show = confirm("操作!是否跳转至登陆");   //把确认框#}
-                            if (show) {
-                                console.debug('未登陆')
-                            }
-                            {# 修改 #}
-                        } else if (data.con == 1) {
-                            console.debug('商品不存在')
-                        } else if (data.con == 2) {
-                            console.debug('数量异常')
-                        } else if (data.con == 3) {
-                            console.debug('库存不足')
-                        } else if (data.con == 200) {
-                            {#alert('添加成功')#}
-                            total_prices();// 重新计算总价
-                            console.debug('添加成功');
+                        if (data.con == 200) {
+                            //alert('添加成功')
+                           // console.debug('添加成功');
 
                             $('.fix-bot-cart').find('i').text(data.values);
                             // 操作页面
                             var current_num = parseInt(self.siblings('input').val());
                             current_num += 1;
                             self.siblings('input').val(current_num);
+                        }else {
+                            console.debug('添加失败!')
                         }
                     }
                 });
@@ -159,6 +150,8 @@
                 var self = $(this);
                 // 删除数据
                 var sku_id = parseInt(self.siblings('input').attr('sku_id'));
+
+                total_prices();// 重新计算总价
 
                 // 当数量小于0时 删除
                 var coun = parseInt(self.siblings('input').attr('sku_id'));
@@ -238,7 +231,10 @@
                 }
             })
 
-
+            // 去结算
+            $('.js-btn').on('click',function () {
+                $('#order_tur').submit()
+            })
         })
     </script>
 {% endblock %}

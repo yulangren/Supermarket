@@ -1,0 +1,94 @@
+{% extends 'public/basis.html' %}
+{% load static %}
+{% block title %}
+    全部订单
+{% endblock %}
+{% block header %}
+    <header data-am-widget="header" class="am-header am-header-default sq-head ">
+        <div class="am-header-left am-header-nav">
+            <a href="javascript:history.back()" class="">
+                <i class="am-icon-chevron-left"></i>
+            </a>
+        </div>
+        <h1 class="am-header-title">
+            <a href="" class="">全部订单</a>
+        </h1>
+    </header>
+{% endblock %}
+{% block content %}
+    <ul class="order-style">
+        <li class="current"><a href="{% url 'order:order_all' %}">全部</a></li>
+        <li><a href="">待付款</a></li>
+        <li><a href="">退发货</a></li>
+        <li><a href="">待收货</a></li>
+        <li><a href="">待评价</a></li>
+
+    </ul>
+    <!--代付款-->
+    {% for od in order %}
+        <div class="c-comment">
+            <span class="c-comment-num">{% if  od.payment_method.payment_name.pk == 1  %}
+            微信{% else %}支付宝
+            {% endif %}</span>
+            <span class="c-comment-suc">{% if od.order_state == 0 %}已付款{% else %}待付款
+
+            {% endif %}</span>
+        </div>
+        <div class="c-comment-list" style="border: 0;">
+            <a href="">
+                <p>应付金额：￥{{ od.order_money }} 实付金额：<span>￥{{ od.actually_paid }}</span></p>
+                <p>订单编号：{{ od.order_number }}</p>
+                <p>下单时间：{{ od.create_date }}</p>
+                <p>联系店长：沫沫 <span><i class="iconfont">&#xe603</i>{{ od.address_tel }}</span></p>
+            </a>
+        </div>
+        <div class="c-com-btn">
+            <a href="tureorder.html" class="oncepay">立即支付</a>
+            <a href="" class="canelpay">取消订单</a>
+        </div>
+        <div class="clear"></div>
+
+    {% endfor %}
+{% endblock %}
+
+
+{% block footer %}
+
+
+    <!--底部-->
+    <div style="height:55px;"></div>
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default sq-foot am-no-layout" id="">
+        <ul class="am-navbar-nav am-cf am-avg-sm-5">
+            <li>
+                <a href="{% url 'goods:index' %}" class="">
+                    <span class="am-icon-home"></span>
+                    <span class="am-navbar-label">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="" class="">
+                    <span class="am-icon-comments"></span>
+                    <span class="am-navbar-label">动态</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'cart:ShopCart' %}" class="">
+                    <span class="am-icon-shopping-cart"></span>
+                    <span class="am-navbar-label">购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'order:order_all' %}" class="curr">
+                    <span class="am-icon-file-text"></span>
+                    <span class="am-navbar-label">订单</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'user:member' %}" class="">
+                    <span class="am-icon-user"></span>
+                    <span class="am-navbar-label">我的</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
